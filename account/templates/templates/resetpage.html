@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="resetPageDesign.css">
+    <link rel="icon" type=png href="static\image\cvsu_logo.png">
+</head>
+<body>
+    <div class="password-reset-container">
+        <div class="content">
+          <h2>Set New Password</h2>
+          <p>Please enter your new password.</p>
+      
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="newPassword" >New Password:</label>
+              <input type="password" id="newPassword" required />
+            </div>
+      
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password:</label>
+              <input type="password" id="confirmPassword" required />
+            </div>
+      
+            <p class="error-message" id="errorMessage" title="Error"></p>
+      
+            <p class="success-message" id="successMessage" title="Success"></p>
+      
+            <div class="button-container">
+              <button type="button" onclick="navigateToLogin()" class="return-button" title="Return to Login">Return to Login</button>
+              <span class="button-space"></span> <button type="submit" class="reset-password-button" title="Save Password">Save New Password</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const newPassword = document.getElementById("newPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Perform password reset logic here (e.g., send data to server)
+            // ...
+
+            // Example: Simulating successful password reset
+            if (newPassword === confirmPassword) {
+                // Redirect to the login page
+                setTimeout(function() {
+                window.location.href = "login.html"; // Replace with your actual login page URL
+                }, 1500); 
+                document.getElementById("successMessage").textContent = "Password reset successful. Please log in.";
+                document.getElementById("errorMessage").textContent = "";
+                
+            } else {
+                // Displaying an error message
+                document.getElementById("errorMessage").textContent = "Passwords do not match.";
+                setTimeout(function() {
+                  document.getElementById("errorMessage").textContent = "";
+                }, 2000); 
+                document.getElementById("successMessage").textContent = "";
+            }
+        }
+
+        function navigateToLogin() {
+            window.location.href = "login.html"; // Replace with your actual login page URL
+        }
+    </script>
+</body>
+</html>

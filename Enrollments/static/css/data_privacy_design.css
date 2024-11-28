@@ -1,0 +1,117 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5fb15f;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.content-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.return {
+    background-color: #848484;
+    color: #fff;
+}
+
+.return:hover {
+    background-color: #5b5b5b;
+}
+
+.accept {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.accept:hover {
+    background-color: #1E5631;
+}
+
+a {
+    color: #4CAF50; /* Green color for the link */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .content-container {
+        width: 90%; /* Adjust width for mobile */
+        margin: 10px auto; /* Reduce margins for mobile */
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    p {
+        font-size: 0.9rem; /* Reduce paragraph size */
+    }
+
+    ul {
+        padding-left: 15px; /* Adjust list padding */
+    }
+
+    button {
+        margin-bottom: 10px; /* Add bottom margin for buttons */
+        width: 48%; /* Adjust button width */
+    }
+
+    button.return {
+        margin-right: 10px; /* Add right margin for the "Return" button */
+    }
+
+    /* Keep buttons in horizontal position on mobile */
+    .button-container {
+        display: flex;
+        justify-content: space-between; /* Distribute space between buttons */
+        align-items: center; /* Align buttons vertically */
+    }
+}

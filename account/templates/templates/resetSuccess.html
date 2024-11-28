@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="resetSuccessDesign.css">
+    <link rel="icon" type=png href="static\image\cvsu_logo.png">
+</head>
+
+<body>
+    <div class="success-container">
+        <div class="content">
+          <img src="static\image\cvsu_logo.png" alt="logo" class="success-logo" />
+          <h2>Password Reset Successful</h2>
+          <p>Congratulation, You Have Successful Change Your Password.</p>
+          <button type="button" onclick="returnToLogin()" class="return-button" title="Return to login">Return to Login</button>
+        </div>
+      </div>
+
+    <script>
+        function returnToLogin(){
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

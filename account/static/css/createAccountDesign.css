@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.create-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #72BF78;
+    color: #243642;
+  }
+  
+  .content {
+    max-width: 750px; /* Increased width for a wider container */
+    padding: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #387478;
+  }
+  
+  .content p {
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Centered Username Row */
+  .single-field {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-evenly; /* Center the fields with even spacing */
+    width: 100%;
+    margin-bottom: 28px;
+    gap: 10px;
+  }
+  
+  .form-group {
+    max-width: 35%; /* Reduced width to 35% to create more space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns label and input together */
+  }
+  
+  .form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center; /* Center text within label */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #A0D683;
+    font-size: 1rem;
+    background-color: #D3EE98;
+    color: #243642;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #72BF78;
+    background-color: #EBF6DD;
+  }
+  
+  .error-message,
+  .success-message {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .return-button {
+    background-color: #FF3131;
+    color: #243642;
+  }
+  
+  .return-button:hover {
+    background-color: #FAA0A0;
+  }
+  
+  .create-account-button {
+    background-color: #A0D683;
+    color: #243642;
+  }
+  
+  .error-message{
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 15px;
+      color: red;    
+  }
+
+  #accountSuccess {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+#accountSuccess div {
+    background-color: white;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 8px;
+    width: 300px;
+    position: relative;
+    z-index: 101;
+}
+
+#accountSuccess p {
+    text-align: center;
+}
+
+#accountSuccess button {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #72BF78;
+}
+
+
+  
+  
+  @media (max-width: 600px) {
+    .create-account-container{
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+    .content {
+      max-width: 90%;
+      padding: 15px;
+      font-size: 0.9rem; /* Slightly smaller font size for better proportion */
+    }
+  
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+      gap: 10px;
+    }
+  
+    .form-group {
+      max-width: 100%; /* Ensure inputs take full width of columns */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the label and input together */
+    }
+  
+    .form-group label {
+      margin-bottom: 4px; /* Reduced margin for smaller spacing */
+      font-size: 0.9rem; /* Slightly smaller label font size */
+      text-align: center;
+    }
+  
+    .form-group input {
+      width: 85%;
+      padding: 8px 12px; /* Reduced padding for smaller input fields */
+      font-size: 0.9rem; /* Reduced font size */
+      border-radius: 4px; /* Slightly smaller border radius */
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 8px; /* Reduced gap for better spacing */
+    }
+  
+    button {
+      font-size: 0.9rem; /* Smaller font size */
+      padding: 8px 14px; /* Adjusted padding for smaller buttons */
+    }
+  
+    /* Center the username input in the container for mobile */
+    .single-field {
+      width: 100%; /* Ensure full width for centering */
+      display: flex;
+      justify-content: center; /* Center the form field within the container */
+      align-items: center;
+    }
+  
+    .form-group input {
+      width: 80%; /* Make the input field slightly smaller to allow centering */
+    }
+  
+    /* Switch button order in mobile view */
+    .return-button {
+      order: 2; /* Move 'Return to Login' button after the 'Create Account' button */
+    }
+  
+    .create-account-button {
+      order: 1; /* Move 'Create Account' button before the 'Return to Login' button */
+    }
+  }
+  

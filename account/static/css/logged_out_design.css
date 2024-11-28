@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; 
+    background-color: #f4f4f4; 
+}
+
+.container {
+    display: flex;
+    height: 100vh; 
+}
+
+.left-side {
+    width: 60%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-color: #5fb15f;
+    background-blend-mode: multiply;
+}
+
+.left-side .content {
+    margin-bottom: 30px;
+}
+
+.left-side .logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.left-side h1 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.left-side .details {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px;
+}
+
+.left-side .details p {
+    margin: 10px 0;
+}
+
+.left-side .details i {
+    margin-right: 10px;
+}
+
+.left-side button {
+    padding: 12px 20px;
+    background-color: #228B22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.left-side button:hover {
+    background-color: #1E5631;
+}
+
+.right-side {
+    width: 40%;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.right-side h2 {
+    color: #228B22;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.right-side p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.right-side form button {
+    padding: 12px 20px;
+    background-color: #228B22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right-side form button:hover {
+    background-color: #1E5631;
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .container {
+        flex-direction: column; /* Stack sections vertically */
+        height: auto; /* Allow height to adjust naturally */
+        width: 100%; /* Ensure container fits viewport width */
+        padding: 0; /* Remove extra padding */
+    }
+
+    .left-side, 
+    .right-side {
+        width: 100%; /* Full width for each section */
+        box-sizing: border-box; /* Include padding in width calculation */
+        padding: 20px; /* Add padding for better content spacing */
+        text-align: center; /* Center-align content */
+    }
+
+    .left-side {
+        order: 1; /* Place the left side at the top */
+        padding: 15px;
+    }
+
+    .left-side .logo {
+        width: 80px; /* Adjust logo size for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .left-side h1 {
+        font-size: 24px; /* Adjust font size for mobile */
+        margin: 10px 0;
+    }
+
+    .left-side .details {
+        font-size: 14px; /* Smaller font for compact layout */
+    }
+
+    .left-side button {
+        font-size: 14px; /* Adjust button size */
+        padding: 10px;
+    }
+
+    .right-side {
+        order: 2; /* Place the right side at the bottom */
+        max-width: 700px; /* Limit the width for better readability */
+        padding-top: 50%;
+        padding-bottom: 60%;
+        background-size: cover;
+    }
+
+    .right-side h2 {
+        font-size: 24px; /* Adjust heading size for mobile */
+        margin-bottom: 15px;
+    }
+
+    .right-side p {
+        font-size: 14px; /* Smaller text for mobile */
+        margin-bottom: 20px;
+    }
+
+    .right-side form button {
+        font-size: 14px; /* Adjust button size */
+        padding: 10px;
+    }
+}

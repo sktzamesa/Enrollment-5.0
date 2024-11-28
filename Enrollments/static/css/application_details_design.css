@@ -1,0 +1,480 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+.header_top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Reduced padding */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.return-button {
+    background-color: #848484; 
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.return-button:hover {
+    background-color: #5b5b5b; /* Darker blue on hover */
+}
+
+.header_top .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header_top img {
+    height: 30px; 
+}
+
+.header_top .title {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.header_top .image-placeholder {
+    width: 40px; 
+    height: 40px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #555;
+    text-align: center;
+}
+
+/* Progress Bar Styling */
+header {
+    width: 100%;
+    background-color: #fff;
+    padding: 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 40px; 
+    z-index: 10;
+}
+
+.progress-container {
+    width: 95%;
+    max-width: 900px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: none;
+    padding-top: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 40px; 
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-bar .progress {
+    height: 5px; 
+    background-color: #4CAF50;
+    border-radius: 100px; 
+    width: 0%;
+    transition: width 0.5s ease;
+    position: absolute; 
+    bottom: 0px; 
+
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    align-items: center;
+    width: 100%;
+}
+
+.progress-step {
+    text-align: center;
+    width: auto;
+    color: #575757;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.progress-step.active {
+    color: #4CAF50;
+    background-color: transparent;
+}
+
+.progress-step:hover {
+    color: #000000;
+    background-color: transparent;
+}
+
+.progress-step p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Form Section */
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 70px auto; 
+    padding: 30px;
+    margin-top: 140px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+i{
+    margin-bottom: 3px;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-container p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+/* Styling for buttons */
+.button-container a {
+    display: inline-block;
+    width: 48%;
+    padding: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.update {
+    background-color: #45a049;
+    color: white;
+}
+
+.update:hover {
+    background-color: #1E5631;
+}
+
+.cancel {
+    background-color: #848484;
+    color: #fff;
+}
+
+.cancel:hover {
+    background-color: #5b5b5b;
+}
+
+.appointment{
+    background-color: #45a049;
+    margin: 0 auto;
+}
+
+.appointment:hover {
+    background-color: #1E5631;
+}
+
+.checkbox_text_designs {
+display: flex;
+font-size: 12px;
+padding-left: 20px;
+padding-bottom: 10px;
+}
+
+.checkbox_text_designs label {
+display: flex;
+padding-top: 9px;
+}
+
+.checkbox_text_designs input[type="checkbox"] {
+margin-right: 6px; /* Add space between checkbox and label */
+accent-color: #4CAF50; /* Set checkbox color to green */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.Application_Details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Application_Details h1 {
+    margin-right: 10px;
+}
+
+.Application_Details i {
+    font-size: 2rem;
+    color: #4CAF50;
+    padding-bottom: 18px
+}
+
+.hr_container hr {
+    border: none;
+    border-top: 3px solid #555;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form_indetifier {
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+/* Styling for the sections */
+section {
+    padding: 10px;
+    margin-top: 10px; 
+    text-align: center;
+}
+
+.image-upload-container {
+    width: 250px;
+    height: 260px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Key change: Use column direction */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;  /* Center horizontally */
+    margin-bottom: 20px;
+    background-color: #ccc;
+    border: 1px solid black;
+}
+
+.image-upload-label {
+    padding-top: 15px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 16px;
+}
+
+.upload-text {
+    border-radius: 8px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 14px;
+    color: white;
+    background-color: #5a5a5a;
+}
+
+.imagePreview {
+    margin: 0 auto; /* Center horizontally */
+    max-width: 240px; /* Adjust as needed */
+    max-height: 185px; /* Adjust as needed */
+    margin-top: 30px; 
+    align-items: center; 
+    border-radius: 10px; 
+    align-content: center; 
+    display: none;
+}
+
+.box {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #695f5f;
+  padding-left: 55px;
+  color: white;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.aplication-updated p{
+    padding-top: 15px;
+    color:#45a049;
+    font-size: 18px;
+}
+
+.instruction{
+    padding-bottom: 20px;
+}
+.upload-requirements {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap onto multiple rows */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+}
+
+.upload-requirements > * {
+    margin-bottom: 20px; 
+    width: 49%; /* Adjust width for 2 containers per row */
+}
+
+ .upload-requirements > *:last-child {
+    margin-right: 0; /* Remove spacing from the last container */
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    /* Add appearance styles for date and time inputs (optional) */
+    -webkit-appearance: none; /* For Safari and Chrome */
+    -moz-appearance: none; /* For Firefox */
+    appearance: none; /* For other browsers */
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Media Query for Mobile Device */
+@media (max-width: 768px) {
+
+    .form-container {
+                width: 95%; 
+                margin: 120 auto; 
+                padding: 50px; 
+            }
+            .upload-requirements > * {
+                width: 100%; 
+                margin-bottom: 10px; 
+            }
+    .progress-step p{
+        font-size: 10px;
+    }
+
+    .form-container h1 {
+    font-size: 1.5rem;
+    }
+
+    label{
+    font-size: 13px;
+    }
+    }
+
+    .form_indetifier h2{
+        font-size: 18px;
+    }
+
+    .button-container a {
+   
+    font-size: 0.8rem;
+    
+    }
+
+    

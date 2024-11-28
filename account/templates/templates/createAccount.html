@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="createAccountDesign.css">
+    <link rel="icon" type=png href="static\image\cvsu_logo.png">
+</head>
+<body>
+    <div class="create-account-container">
+        <div class="content">
+          <h2>Create Account</h2>
+          <p>Please fill out the form to create an account.</p>
+      
+          <form onsubmit="handleSubmit(event)">
+            <!-- Username Field Row -->
+            <div class="form-row single-field">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" title="User Name" required />
+              </div>
+            </div>
+      
+            <!-- First and Last Name Fields Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" title="Firs Name" required />
+              </div>
+      
+              <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required title="Last Name"/>
+              </div>
+            </div>
+      
+            <!-- Middle Initial and Email Fields Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="middleInitial">Middle Initial:</label>
+                <input type="text" id="middleInitial" maxlength="1" title="Middle Initial"/>
+              </div>
+      
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required title="Email Address" />
+              </div>
+            </div>
+      
+            <!-- Password and Repeat Password Fields Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required title="Password"/>
+              </div>
+      
+              <div class="form-group">
+                <label for="repeatPassword">Repeat Password:</label>
+                <input type="password" id="repeatPassword" required title="Repeat Password" />
+              </div>
+            </div>
+      
+            <p class="error-message" id="errorMessage" title="Error Message"></p>
+      
+            <div class="button-container">
+              <button type="button" onclick="navigateToLogin()" class="return-button" title="Return to login">Return to Login</button>
+              <span class="button-space"></span> 
+              <button type="submit" class="create-account-button" title="Create Account">Create Account</button>
+            </div>
+          </form>
+    
+          <div id="accountSuccess" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 100;">
+            <div style="background-color: white; padding: 20px; margin: 10% auto; border-radius: 8px; width: 300px; position: relative; z-index: 101;">
+                <p style="text-align: center;">Successfully Created Account! You can now log in.</p>
+                <button onclick="navigateToLogin()" class="return-button" style="width: 100%; margin-top: 10px;" title="Return to login">Go to Login</button>
+            </div>
+          </div>
+        </div>
+      </div>    
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const middleInitial = document.getElementById("middleInitial").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const repeatPassword = document.getElementById("repeatPassword").value;
+
+            // Perform account creation logic here (e.g., send data to server)
+            // ...
+
+            // Example: Simulating successful account creation
+            if (password === repeatPassword) {
+                // Redirect to the login page
+                // window.location.href = "login.html"; // Replace with your actual login page URL
+                document.getElementById("accountSuccess").style.display = "block";
+                document.getElementById("errorMessage").textContent = "";
+
+                // Auto-redirect after 10 seconds
+                setTimeout(function() {
+                    navigateToLogin();
+                }, 3000);
+            } else {
+                // Displaying an error message
+                document.getElementById("errorMessage").textContent = "Passwords do not match.";
+            }
+        }
+
+        function navigateToLogin() {
+            window.location.href = "login.html"; // Replace with your actual login page URL
+        }
+
+        function accountSuccessCreate() {
+            // This function is just a placeholder for the "Successfully Created Account" template.
+            // You should remove this button and implement the actual account creation logic in the handleSubmit function.
+            // The code above shows how to display the success message and redirect to the login page.
+        }
+    </script>
+</body>
+</html>

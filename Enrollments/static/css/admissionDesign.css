@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; 
+    background-color: #f4f4f4; 
+  }
+
+.container {
+    display: flex;
+    height: 100vh; 
+} 
+
+.left-side {
+    width: 60%;
+    background-image: url("static/image/photo4edited.jpeg"); /* Your chosen background image */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color: white; /* Text color for contrast */
+    padding: 20px;
+    text-align: center;
+    background-color: #228B22;
+    background-blend-mode: color-burn;
+    
+}
+
+.left-side .content {
+    margin-bottom: 30px; /* Space between content and details */
+}
+
+.left-side .logo {
+    width: 100px; /* Adjust size for better visual alignment */
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+.left-side h1 {
+    font-size: 36px; /* Larger font size for prominence */
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.left-side .details {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px; /* Prevent text from stretching too wide */
+}
+
+.left-side .details p {
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+.left-side .details i {
+    margin-right: 10px; /* Space between icons and text */
+}
+
+.right-side {
+    width: 40%;
+    background-color: white; 
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+  }

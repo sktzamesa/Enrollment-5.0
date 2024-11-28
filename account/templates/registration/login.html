@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/login_Design.css" %}">
+    <script src="https://kit.fontawesome.com/ff87496a7c.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{% static "image/cvsu_logo.png" %}">
+    <title>Login</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-side" style="background-image: url('{% static "image/bg.png" %}')">
+            <div class="content">
+                <img src="{% static "image/cvsu_logo.png"%}" alt="Logo" class="logo"> 
+                <h1>Cavite  State University, <br> Bacoor Campus</h1>
+            </div>
+
+            <div class="details">
+                <p><i class="fa-solid fa-location-dot"></i> Soldiers Hills IV, Molino VI, Bacoor City, Cavite</p>
+                <p><i class="fa-regular fa-envelope"></i> cvsubacoor@cvsu.edu.ph</p>
+                <p><i class="fa-solid fa-phone"></i> (046) 476-5029</p>
+
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="right-side">
+            <form action = "{% url 'login' %}" method="post" class="login-form">
+                <h1>Login</h1>
+
+                    
+
+                    <p>Username</p>
+                    {{form.username}}
+
+                    <div class="forgotpass">
+                        <p>Password</p>
+                        <a href="{% url "password_reset" %}" class="forgot_pass">Forgot Password?</a>    
+                    </div>
+                    {{form.password}}
+               
+                <div class="error_message">
+                    {% if form.errors %}
+<p>
+    Your username and password didn't match
+</p>
+{% else %}
+<p>Please use the following forms to log-in</p>
+{% endif %}
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" name="remember" id="remember">
+                    <p>Remember Me</p>
+                </div>
+
+                <button type="submit" value="login">Sign In</button>
+
+                <div class="divider"><p> Not yet enrolled? Submit an admission form <a href = "{% url "admission:data_privacy" %}">here </a> </p></div>
+
+                <!-- <div class="no_account" > 
+                    <p>Don't have Account?</p>
+                    <a href="#"> Register</a>
+                </div> -->
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>    
+</body>
+</html>

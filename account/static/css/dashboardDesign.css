@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FFFEFC;
+    color: #243642;
+    padding: 20px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #72BF78;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #243642;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  header button {
+    padding: 10px 20px;
+    background-color: #A0D683; /* Button color */
+    color: #243642; /* Text color */
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  header button:hover {
+    background-color: #D3EE98; /* Hover color for the button */
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #387478;
+  }
+
+  .content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .link {
+    color: #387478;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .link:hover {
+    color: #A0D683;
+  }
+
+  /* Additional Mobile Styling for Professional Look */
+  @media (max-width: 650px) {
+    .dashboard-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #FFFEFC;
+      color: #243642;
+      padding: 10px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #72BF78;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      color: #243642;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    header button {
+      padding: 8px 16px;
+      background-color: #A0D683; /* Button color */
+      color: #243642; /* Text color */
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    header button:hover {
+      background-color: #D3EE98; /* Hover color for the button */
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content {
+      max-width: 90%;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #387478;
+    }
+
+    .content p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    .link {
+      color: #387478;
+      text-decoration: none;
+      margin-right: 5px;
+      transition: color 0.3s ease;
+    }
+
+    .link:hover {
+      color: #A0D683;
+    }
+  }

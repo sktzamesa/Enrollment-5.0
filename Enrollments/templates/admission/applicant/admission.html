@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ff87496a7c.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{% static "image/cvsu_logo.png"%}">
+    <title>Admission Login</title>
+    <style>
+        * {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif; 
+            background-color: #f4f4f4; 
+        }
+
+        .container {
+            display: flex;
+            height: 100vh; 
+        } 
+
+        .left-side {
+            width: 60%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            color: white; /* Text color for contrast */
+            padding: 20px;
+            text-align: center;
+            background-color: #5fb15f;
+            background-blend-mode: multiply;
+        }
+
+        .left-side .content {
+            margin-bottom: 30px; /* Space between content and details */
+        }
+
+        .left-side .logo {
+            width: 100px; /* Adjust size for better visual alignment */
+            margin-bottom: 15px; /* Space below the logo */
+        }
+
+        .left-side h1 {
+            font-size: 36px; /* Larger font size for prominence */
+            font-weight: bold;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .right-side {
+            width: 40%;
+            background-color: white; 
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content within the right side */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .agreement{
+            margin-top: 20px;
+            text-align: justify;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column; 
+            width: 100%;
+            text-align: center; /* Center-align text for better design */
+        }
+
+        .login-form h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .login-form button {
+            background-color: red;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .login-form button:hover {
+            background-color: rgb(207, 1, 1);
+        }
+
+        .login-form i {
+            margin-left: 10px;
+        }
+
+        .right-side h2 {
+            color: #228B22;
+            font-size: 35px;
+        }
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body, html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden; /* Prevent scrolling */
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .left-side {
+        width: 100%;
+        height: 50%; /* Fixed height for mobile */
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .left-side h1 {
+        font-size: 20px;
+    }
+
+    .left-side .logo {
+        width: 60px; /* Scaled-down logo size */
+    }
+
+    .right-side {
+        width: 100%;
+        height: 50%; /* Fixed height for mobile */
+        padding: 20px 80px; /* Reduced padding to make the content smaller */
+        box-sizing: border-box;
+        box-shadow: none;
+    }
+
+    .login-form h2 {
+        font-size: 18px;
+    }
+
+    .login-form button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .login-form .agreement {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side" style="background-image: url('../static/image/bg.png')">
+            <div class="content">
+                <img src="{% static "image/cvsu_logo.png" %}" alt="Logo" class="logo">
+                <h1>Cavite State University, <br> Online Student Admission System <br> 1st Semester 2023-2024</h1>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="login-form">
+                <h2>Admission Login</h2>
+                <a href="{% url 'social:begin' 'google-oauth2' %}">
+    <button>
+        <i class="fa-brands fa-google"></i> Log in with Google
+    </button>
+</a>
+                <div class="agreement">
+                    <p>By signing in, you are authorizing Cavite State University to  collect, store and process the data given to the system for the purpose of applying for admission in this University.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

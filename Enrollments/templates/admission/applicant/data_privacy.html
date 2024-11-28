@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Privacy</title>
+    <link rel="icon" href="{% static "image/cvsu_logo.png"%}">
+    <link rel="stylesheet" href="{% static "css/data_privacy_design.css"%}">
+    <style>
+        
+    </style>
+</head>
+<body style="background-image: url('../static/image/bg.png')">
+    <div class="content-container">
+        <h2>Data Privacy Notice and Concent Form</h2>
+
+        <p>Cavite State University (CvSU) is required by law to process your personal information and sensitive personal information in order to safeguard academic freedom, uphold your right to quality education, and protect your right to data privacy in conformity with Republic Act No. 10173, otherwise known as the Data Privacy Act of 2012, and its implementing rules and regulations. The said law can be viewed via <a href="https://www.officialgazette.gov.ph/2012/08/15/republic-act-no-10173/">this link</a>.</p>
+
+        <h2>Personal Information Collected and Stored</h2>
+        <ul>
+            <li>Name, age, date of birth</li>
+            <li>Address and contact details</li>
+            <li>Civil Status, Nationality, Religion</li>
+            <li>Family Profile (e.g., names of parents/guardians, address, contact details)</li>
+            <li>Medical history and records</li>
+            <li>Choice of campus and degree program</li>
+            <li>Educational records</li>
+            <li>Learner reference number (if any)</li>
+            <li>Photograph or image</li>
+            <li>Signature</li>
+            <li>Socio-economic and geographic information about your household</li>
+        </ul>
+
+        <h2>Sensitive Personal Information Collected and Stored</h2>
+        <p>The University also processes sensitive personal information under the DPA. These include, but are not limited to: race, ethnicity, civil status, health information, government-issued ID, and relevant financial information.</p>
+
+        <h2>Disclosure</h2>
+        <p>To comply with its legal and regulatory duties, the University submits required information to relevant government agencies such as the Commission on Higher Education (CHED). As a rule, CvSU will only disclose your personal data to third parties with your consent, except when required or allowed by applicable laws.</p>
+
+        <h2>Security</h2>
+        <p>Your personal data is stored in physical repositories and secured databases managed by the University's Registrar, ICT Office, and/or their counterparts in the CvSU Campuses. The University employs appropriate physical, technical, and organizational security measures which ensure the confidentiality of your information. These measures will be reviewed and updated over time.</p>
+
+        <h2>Consent</h2>
+        <p>By continuing, you confirm that you have read the CvSU Privacy Notice and Consent Form, understood its contents, and consent to the processing of your personal data in accordance with the said notice and applicable laws.</p>
+
+            <div class="button-container">
+                <a href="{% url 'login' %}" class="return">
+        <button>Return</button>
+    </a>
+                <a href="{% url 'admission:admission' %}" class="accept">
+        <button>Accept</button>
+    </a>
+            </div>
+    </div>
+</body>
+</html>

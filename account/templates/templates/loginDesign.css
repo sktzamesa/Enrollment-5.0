@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+.main-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: #FFFADA;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 100%;
+  }
+
+  /* Add padding to the header */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1E5631;
+    max-width: 600px;
+    padding: 30px; /* Added padding to the header */
+  }
+
+  .login_logo {
+    max-width: 170px; /* Increased size of the logo */
+    margin-bottom: 20px;
+  }
+
+  .header h2 {
+    margin: 0;
+    font-size: 50px; /* Increased font size for header text */
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .login-box-container {
+    padding: 20px;
+  }
+
+  /* Add padding to the login-container */
+  .login-container {
+    background-color: #1E5631;
+    color: #F5F5F5;
+    padding: 40px 30px; /* Existing padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    text-align: center;
+    min-height: 400px; /* Set a minimum height to keep the container size consistent */
+    padding: 20px;
+    overflow: hidden; /* Prevent scrolling within the login-container */
+  }
+
+  .login-container h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #F5F5F5;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .fas{
+    color: #243642;
+  }
+  input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #A0D683;
+    font-size: 15px;
+    background-color: #D3EE98;
+    color: #243642;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    width: calc(100% - 25px); /* Adjust width to leave space for the icon */
+  }
+
+  input::placeholder {
+    color: #243642;
+    opacity: 0.7;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #72BF78;
+    background-color: #EBF6DD;
+  }
+
+  button {
+    padding: 12px;
+    background-color: #A0D683;
+    color: #243642;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #87C676;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .login-container .error-message {
+    color: #dd4b39;
+    font-size: 14px;
+    text-align: center; /* Centered for better appearance */
+    display: none;
+  }
+
+  .login-container p {
+    margin: 20px 0 8px;
+    font-size: 14px;
+    color: #D3EE98;
+  }
+
+  .divider {
+    margin: 1px 0; /* Adjust margin for spacing */
+    border: none;
+    height: 1px;
+    background-color: #D3EE98; /* Divider color */
+  }
+
+
+  .login-container button:last-of-type {
+    background-color: #87C676;
+    font-size: 14px;
+  }
+
+  .login-container button:last-of-type:hover {
+    background-color: #72BF78;
+  }
+
+  /* Social Buttons */
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove default link underline */
+    font-weight: bold;
+  }
+
+  .social-button.facebook {
+    background-color: #3b5998; /* Facebook blue */
+    color: white;
+  }
+
+  .social-button.gmail {
+    background-color: #dd4b39; /* Gmail red */
+    color: white;
+  }
+
+  .social-button i {
+    margin-left: 10px; /* Space between text and icon */
+  }
+
+  .forgot-password{
+    cursor: pointer;
+  }
+
+  .password-input {
+    position: relative;
+    width: 100%;
+  }
+
+  .password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #243642; /* Match the password input color */
+    font-size: 1.2rem;
+}
+
+  .password-toggle i {
+    font-size: 1.2rem;
+  }
+
+  /* Mobile Styling */
+  @media (max-width: 600px) {
+    .main-container {
+      flex-direction: column;
+      align-items: center; /* Center items vertically */
+    }
+
+    .header {
+      align-items: center;
+    }
+
+    .header .login_logo {
+      max-width: 100px; /* Increased size of the logo */
+      align-self: center;
+      size: 10px;
+    }
+      
+
+    .login-box-container {
+      padding: 0px 10px;
+      padding-bottom: 20px;
+      display: flex; /* Make login-box-container a flex container */
+      justify-content: center; /* Center the login-container horizontally */
+      align-items: center; /* Center the login-container vertically */
+      flex-direction: center;
+    }
+
+    .login-box-container {
+      max-width: 300px;
+    }
+
+    .login-container {
+      width: 400px;
+      display: flex; /* Make login-container a flex container */
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center content within the login-container */
+      min-height: 300px;
+      overflow: hidden; /* Prevent scrolling within the login-container */
+    }
+
+    .login_logo {
+      max-width: 130px; /* Increased size of the logo */
+      margin-bottom: 0;
+    }
+
+    .header {
+      padding-top: 120px;
+    }
+
+    .main-container {
+      gap: 0;
+    }
+
+    .login-container {
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    .login-container h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: #F5F5F5;
+    }
+
+    form {
+      gap: 10px;
+    }
+
+    .login-container p {
+      margin: 5px 10px;
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #D3EE98;
+    }
+
+    button {
+      padding: 10px;
+    }
+
+    .social-button {
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    /* Add a small margin between each button */
+    .social-button + .social-button {
+      margin-top: 8px;
+    }
+
+    .social-button i {
+      margin-left: 10px; /* Space between text and icon */
+    }
+  }
+
+  /* Half screen style */
+
+  @media (max-width: 900px) {
+    .login-box-container {
+      max-width: 300px;
+    }
+
+    .header {
+      max-width: 300px;
+    }
+
+    .header h2 {
+      font-size: 25px;
+    }
+
+    .login-container {
+      width: 250px;
+      overflow: hidden; /* Prevent scrolling within the login-container */
+    }
+
+    .social-button {
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    /* Add a small margin between each button */
+    .social-button + .social-button {
+      margin-top: 8px;
+    }
+  }

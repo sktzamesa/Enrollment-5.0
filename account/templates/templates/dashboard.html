@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="dashboardDesign.css">
+    <link rel="icon" type=png href="static\image\cvsu_logo.png">
+
+</head>
+
+<body>
+    <div class="dashboard-container" id=>
+        <header>
+          <h1>Welcome, User!</h1>
+          <button onclick="logout()" title="Logout">Logout</button>
+        </header>
+      
+        <main>
+          <div class="content">
+            <h2>Dashboard</h2>
+            <p>This is your dashboard. You can access your data, manage your settings, and perform other tasks here.</p>
+            <p>
+              <a href="#" class="link">View Profile</a>
+              <a href="#" class="link">Manage Settings</a>
+            </p>
+          </div>
+        </main>
+      </div>     
+      
+    <script>
+         function logout(event) {
+          window.location.href = "login.html"; // Replace with your actual page URL
+        }
+    </script>
+</body>
+</html>
