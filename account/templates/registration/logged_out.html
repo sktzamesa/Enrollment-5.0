@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS_DESIGNS/logged_out_design.css">
+    <link rel="stylesheet" href="{% static "css/logged_out_design.css"%}">
     <script src="https://kit.fontawesome.com/ff87496a7c.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="static/image/cvsu_logo.png">
+    <link rel="icon" type="image/png" href="{% static "image/cvsu_logo.png" %}">
     <title>Logged Out</title>
 </head>
 
@@ -13,7 +14,7 @@
     <div class="container">
         <div class="left-side">
             <div class="content">
-                <img src="static/image/cvsu_logo.png" alt="Logo" class="logo">
+                <img src="{% static "image/cvsu_logo.png" alt="Logo" class="logo"%}">
                 <h1>Cavite State University, <br> Bacoor Campus</h1>
             </div>
 
@@ -29,9 +30,7 @@
         <div class="right-side">
             <h2>You have been logged out</h2>
             <p>Thank you for visiting!</p>
-            <form action="">
-                <button>Back to Login</button>
-            </form>
+            <a href="{% url "login" %}">log-in again</a>
         </div>
     </div>
 </body>

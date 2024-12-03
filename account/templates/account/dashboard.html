@@ -9,7 +9,10 @@
     <div class="dashboard-container" id=>
         <header>
           <h1>Welcome, User!</h1>
-          <button onclick="logout()" title="Logout">Logout</button>
+          	<form action="{% url 'logout' %}" method = "post">
+		<button type = "submit">Logout</button>
+		{% csrf_token %}
+	</form>
         </header>
       
         <main>

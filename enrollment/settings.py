@@ -46,13 +46,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
+    "account.apps.AccountConfig",
     "unfold",
     "unfold.contrib.filters",
-    "account.apps.AccountConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -61,14 +60,24 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'django_countries',
     'widget_tweaks',
-    'Enrollments.apps.EnrollmentsConfig'
+    'tailwind',
+    'theme',
+    'django_browser_reload',
+    'Enrollments.apps.EnrollmentsConfig',
+    'bscs.apps.BscsConfig',
+    'bscs_year_section.apps.BscsYearSectionConfig',
+    'bscs_student.apps.BscsStudentConfig',
+    'bscs_year_subjects.apps.BscsYearSubjectsConfig',
+    'bscs_instructors.apps.BscsInstructorsConfig',
 ]
 
-DATE_INPUT_FORMATS = [
-    '%d/%m/%Y',
-    '%Y-%m-%d',
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -78,6 +87,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = "enrollment.urls"
