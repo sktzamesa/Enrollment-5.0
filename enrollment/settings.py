@@ -51,6 +51,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "account.apps.AccountConfig",
     "unfold",
+    "unfold.contrib.import_export",
     "unfold.contrib.filters",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -63,6 +64,7 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'django_browser_reload',
+    'import_export',
     'Enrollments.apps.EnrollmentsConfig',
     'bscs.apps.BscsConfig',
     'bscs_year_section.apps.BscsYearSectionConfig',
