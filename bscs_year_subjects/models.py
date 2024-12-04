@@ -9,7 +9,7 @@ class FirstYearSubject(models.Model):
         on_delete= models.CASCADE,
         related_name='First_year_Instructors'
     )
-    FirstYearSubject = models.ForeignKey(
+    FirstYearSections = models.ForeignKey(
         FirstYearSection,
         on_delete=models.CASCADE,
         related_name='First_year_Subjects'
@@ -27,7 +27,7 @@ class SecondYearSubject(models.Model):
         on_delete= models.CASCADE,
         related_name='Second_year_Instructors'
     )
-    Second_Year_Subject  = models.ForeignKey(
+    Second_Year_Sections  = models.ForeignKey(
         FirstYearSection,
         on_delete=models.CASCADE,
         related_name='Second_year_Subjects'
@@ -46,7 +46,7 @@ class ThirdYearSubject(models.Model):
         on_delete= models.CASCADE,
         related_name='Third_year_Instructors'
     )
-    Third_Year_Subject = models.ForeignKey(
+    Third_Year_Sections = models.ForeignKey(
         FirstYearSection,
         on_delete=models.CASCADE,
         related_name='Third_Year_Subject'
@@ -66,7 +66,7 @@ class FourthYearSubject(models.Model):
         on_delete= models.CASCADE,
         related_name='Fourth_year_Instructors'
     )
-    Fourth_Year_Subject = models.ForeignKey(
+    Fourth_Year_Sections = models.ForeignKey(
         FirstYearSection,
         on_delete=models.CASCADE,
         related_name='Fourth_year_subjects'

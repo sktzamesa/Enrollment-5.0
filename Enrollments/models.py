@@ -62,7 +62,7 @@ class Admission(models.Model):
     full_name = models.CharField(max_length=250)
     Given_name = models.CharField(max_length=250)
     Middle_name = models.CharField(max_length=250, blank=True)
-    last_name = models.CharField(max_length=250, blank=True)
+    last_name = models.CharField(max_length=250)
     Suffix = models.CharField(max_length=250, blank=True)
     Date_of_birth = models.DateField()
     Contact_number = models.CharField(max_length=250)
