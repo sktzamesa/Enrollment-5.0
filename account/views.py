@@ -10,3 +10,9 @@ def dashboard(request):
         "account/dashboard.html",
         {'section':'dashboard'}
     )
+@login_required
+def about(request):
+    return render(
+        request,
+        'account/about.html',
+    )

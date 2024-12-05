@@ -36,11 +36,11 @@ class SecondYearSection(models.Model):
 
 class ThirdYearSection(models.Model):
     class ThirdYearSectionChoices(models.TextChoices):
-        BSCS_2_1 = 'BSCS 2-1', 'BSCS 2-1'
-        BSCS_2_2 = 'BSCS 2-2', 'BSCS 2-2'
-        BSCS_2_3 = 'BSCS 2-3', 'BSCS 2-3'
-        BSCS_2_4 = 'BSCS 2-4', 'BSCS 2-4'
-        BSCS_2_5 = 'BSCS 2-5', 'BSCS 2-5'
+        BSCS_2_1 = 'BSCS 3-1', 'BSCS 2-1'
+        BSCS_2_2 = 'BSCS 3-2', 'BSCS 2-2'
+        BSCS_2_3 = 'BSCS 3-3', 'BSCS 2-3'
+        BSCS_2_4 = 'BSCS 3-4', 'BSCS 2-4'
+        BSCS_2_5 = 'BSCS 3-5', 'BSCS 2-5'
 
     ThirdYearSection = models.CharField(
         max_length=8,
@@ -52,11 +52,11 @@ class ThirdYearSection(models.Model):
 
 class FourthYearSection(models.Model):
     class FourthYearSectionChoices(models.TextChoices):
-        BSCS_2_1 = 'BSCS 2-1', 'BSCS 2-1'
-        BSCS_2_2 = 'BSCS 2-2', 'BSCS 2-2'
-        BSCS_2_3 = 'BSCS 2-3', 'BSCS 2-3'
-        BSCS_2_4 = 'BSCS 2-4', 'BSCS 2-4'
-        BSCS_2_5 = 'BSCS 2-5', 'BSCS 2-5'
+        BSCS_2_1 = 'BSCS 4-1', 'BSCS 2-1'
+        BSCS_2_2 = 'BSCS 4-2', 'BSCS 2-2'
+        BSCS_2_3 = 'BSCS 4-3', 'BSCS 2-3'
+        BSCS_2_4 = 'BSCS 4-4', 'BSCS 2-4'
+        BSCS_2_5 = 'BSCS 4-5', 'BSCS 2-5'
 
     FourthYearSection = models.CharField(
         max_length=8,
