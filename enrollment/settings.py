@@ -64,7 +64,6 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'django_browser_reload',
-    'import_export',
     'Enrollments.apps.EnrollmentsConfig',
     'bscs.apps.BscsConfig',
     'bscs_year_section.apps.BscsYearSectionConfig',
