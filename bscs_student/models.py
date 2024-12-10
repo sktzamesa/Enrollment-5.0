@@ -1,10 +1,10 @@
 from django.db import models
 from bscs_year_section.models import FirstYearSection
-from bscs_year_subjects.models import FirstYearSubject
+from bscs_year_subjects.models import FirstYearFirstSemesterSubject
 from django.conf import settings
 
 # Create your models here.
-class FirstYearStudent(models.Model):
+class FirstYearFirstSemesterStudent(models.Model):
     class RegularorIrregular(models.TextChoices):
         REGULAR = 'RG','REGULAR'
         IRREGULAR = 'IR','IRREGULAR'
@@ -29,6 +29,6 @@ class FirstYearStudent(models.Model):
         related_name = 'year_section_student'
     )
     first_year_subject = models.ManyToManyField(
-        FirstYearSubject,
+        FirstYearFirstSemesterSubject,
         related_name='FirstYearStudents'
     )

@@ -61,15 +61,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'django_countries',
     'widget_tweaks',
-    'tailwind',
-    'theme',
-    'django_browser_reload',
     'Enrollments.apps.EnrollmentsConfig',
     'bscs.apps.BscsConfig',
     'bscs_year_section.apps.BscsYearSectionConfig',
     'bscs_student.apps.BscsStudentConfig',
     'bscs_year_subjects.apps.BscsYearSubjectsConfig',
     'bscs_instructors.apps.BscsInstructorsConfig',
+    'Bscs_Student_Grades.apps.BscsstudentgradesConfig',
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -88,7 +86,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = "enrollment.urls"
@@ -121,9 +118,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-
-# Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
