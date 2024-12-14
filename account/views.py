@@ -22,7 +22,6 @@ def home(request):
 
 @login_required
 def nav(request):
-    # Ensure the user has an associated profile
     student_profile = get_object_or_404(Profile, User_Student_Profile=request.user)
 
     return render(

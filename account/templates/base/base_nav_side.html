@@ -31,7 +31,7 @@
            <a href="{% url 'home' %}" class="logo">CvSU</a>
 
            <form action="search.html" method="post" class="search-form">
-              <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+              <input type="text" name="search_box" required placeholder="search your courses..." maxlength="100">
               <button type="submit" class="fas fa-search"></button>
            </form>
 
@@ -83,13 +83,13 @@
                        {% if request.user.is_authenticated %}
            <h3 class="name">{{request.user.first_name|default:request.user.username}}</h3>
             {% endif %}
-           <p class="role">student</p>
+           <p class="role">Student ID: {{student_profile.StudentID}}</p>
            <a href="{% url 'student_profile' %}" class="btn">view profile</a>
         </div>
      
         <nav class="navbar">
            <a href="{% url 'home' %}"><i class="fas fa-home"></i><span>Home</span></a>
-           <a href="{% url 'grades' %}"><i class="fa-solid fa-table-list"></i><span>Grades</span></a>
+           <a href="{% url 'grades' %}"><i class="fa-solid fa-table-list"></i><span>Checklist</span></a>
            <a href="{% url 'about' %}"><i class="fas fa-question"></i><span>About</span></a>
            <a href="{% url 'course' %}"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
            <a href="{% url 'teacher' %}"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
