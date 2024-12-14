@@ -3,7 +3,7 @@ from .models import FirstYearSection,SecondYearSection,ThirdYearSection,FourthYe
 from unfold.admin import ModelAdmin
 # Register your models here.
 @admin.register(FirstYearSection)
-class FirstYearSection_admin(ModelAdmin):
+class FirstYearSectionAdmin(ModelAdmin):
     list_display = ['first_year_section']
 
 @admin.register(SecondYearSection)

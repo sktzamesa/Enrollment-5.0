@@ -1,0 +1,52 @@
+{% extends "base/base_nav_side.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>{% block title %}Courses{% endblock %}</title>
+</head>
+<body>
+
+   {% block content %}
+
+   
+   <section class="courses">
+      <h1 class="heading">Our Courses</h1>
+      <div class="box-container">
+    <div class="box">
+        <div class="tutor">
+           <img src="images/pic-2.jpg" alt="">
+           <div class="info">
+              <h3>Aida Penson</h3>
+              <span>0-0-2022</span>
+           </div>
+        </div>
+        <div class="thumb">
+        
+        </div>
+     
+        <a href="{% url 'teacher_profile' %}" class="inline-btn">view profile</a>
+      <div class="box-container">
+
+           <div class="box">
+              <div class="tutor">
+              
+                    <h3 class="title">MATH 2</h3>
+                    <span> (Linear Algebra) </span>
+                 </div>
+                 <a href="{% url 'course_details' %}" class="inline-btn">view</a>
+              </div>
+        
+  </div>
+</div>
+  </section>
+  
+
+  {% endblock %}
+
+</body>
+</html>

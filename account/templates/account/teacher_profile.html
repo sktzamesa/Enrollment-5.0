@@ -1,0 +1,33 @@
+{% extends "base/base_nav_side.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+    <title>{% block title %} Prof 1 {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+<section class="teacher-profile">
+
+   <h1 class="heading">profile details</h1>
+
+    <div class="details">
+        <div class="tutor">
+           <img src="images/pic-2.jpg" alt="">
+           <h3>Ben Bacolor</h3>
+           <span>Professor</span>
+        </div>
+        <div class="flex">
+           <p> <span>Operating Systems</span></p>
+          
+        </div>
+     </div>
+</section>
+{% endblock %}
+</body>
+</html>

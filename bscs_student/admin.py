@@ -1,9 +1,9 @@
 from django.contrib import admin
-from bscs_student.models import FirstYearFirstSemesterStudent
+from bscs_student.models import BSCSStudent
 from unfold.admin import ModelAdmin
 # Register your models here.
-@admin.register(FirstYearFirstSemesterStudent)
-class FirstYearStudentAdmin(ModelAdmin):
-    list_display = ['Full_name','StudentID','year_section','Type_of_student']
-    search_fields = ['Full_name','StudentID']
-    list_filter = ['year_section','Type_of_student']
+@admin.register(BSCSStudent)
+class FirstYearFirstSemesterStudentAdmin(ModelAdmin):
+    list_display = ['Student','Type_of_student']
+    search_fields = ['Student']
+    list_filter = ['First_year_section','Type_of_student']

@@ -1,0 +1,32 @@
+{% extends "base/base_nav_side.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Course Details {% endblock %}</title>
+</head>
+<body>
+   {% block content %}
+   <section class="teacher-profile">
+
+      <h1 class="heading">Course details</h1>
+   
+    <div class="details">
+        <div class="tutor">
+        
+           <h3>OOP</h3>
+        
+        </div>
+        <div class="flex">
+           <p> <span>"Object Oriented Programming"</span></p>
+          
+        </div>
+     </div>
+
+     </section>
+
+     {% endblock %}
+</body>
+</html>

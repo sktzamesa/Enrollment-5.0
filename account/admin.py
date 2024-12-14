@@ -21,5 +21,5 @@ class GroupAdmin(BaseGroupAdmin, ModelAdmin):
 
 @admin.register(Profile)
 class ProfileAdmin(ModelAdmin):
-    list_display = ['user','date_of_birth']
+    list_display = ['User_Student_Profile','date_of_birth']
 # Register your models here.

@@ -1,0 +1,172 @@
+{% extends "base/base_nav_side.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    
+    {% block favicon %}
+    <link rel="icons" type="icons" href="{% static "image/cvsu_logo.png"%}">
+
+    {% endblock %}
+    <title>{% block title %} Grades {% endblock %}</title>
+</head>
+
+
+{% block content %}
+<body>
+    <div class="grades_form_container">
+        <form action="">
+
+            <h1>Choose Year and Semester</h1>
+            <label for="academic_year"> Academic Year 
+                <select name="academic_year" id="academic_year"></select>
+            </label>
+
+            <label for="semester"> Semester 
+                <select name="semester" id="semester"></select>
+            </label>
+
+            <a class="btn grades">Select</a>
+        </form>
+    
+    </div>
+
+    <hr> 
+
+    <div class="grades_container">
+        
+        <span class="grades_h1"><h1 >Grades</h1></span>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Description</th>
+                    <th>Midterm</th>
+                    <th>Finals</th>
+                    <th>Final Grade</th>
+                    <th>Remarks Pass</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+        
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+        
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+        
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+                <tr>
+                    <td>MATH 2</td> <!-- Subject Code-->
+                    <td>Linear Algerba</td> <!-- Description -->
+                    <td>80</td> <!-- Midterm Grade -->
+                    <td>75</td> <!-- Finals -->
+                    <td>78</td>  <!-- Final Grade -->
+                    <td>Passed</td> <!-- Remarks -->
+                </tr>
+
+
+        
+               
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+</body>
+</html>

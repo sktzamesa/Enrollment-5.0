@@ -1,0 +1,46 @@
+{% extends "base/base_nav_side.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <title>{% block title %} Prof 1 {% endblock %}</title>
+</head>
+<body>
+
+   {% block content %}
+   <section class="teachers">
+
+      <h1 class="heading">expert teachers</h1>
+   
+      <div class="search_tutor_container">
+         <form action="" method="post" class="search-tutor">
+            <button type="submit" class="fas fa-search" name="search_tutor"></button>
+            <input type="text" name="search_box" placeholder="search proffesors..." required maxlength="100">
+         </form>
+      </div>
+
+      <div class="box-container">
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/pic-2.jpg" alt="">
+               <div>
+                  <h3>nini</h3>
+                  <span>Professor</span>
+               </div>
+            </div>
+         
+            <a href="{% url 'teacher_profile' %}" class="inline-btn">view profile</a>
+         </div>
+         </div>
+   </section>
+
+   
+    
+   {% endblock %}
+</body>
+</html>

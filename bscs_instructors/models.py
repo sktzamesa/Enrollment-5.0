@@ -1,15 +1,15 @@
 from django.db import models
-from bscs_year_subjects.models import FirstYearFirstSemesterSubject
-class FirstYearInstructor(models.Model):
+from bscs_year_courses.models import FirstYearFirstSemesterCourses
+class FirstYearFirstSemesterInstructor(models.Model):
     First_name = models.CharField(max_length=250)
     Middle_name = models.CharField(max_length=250,blank=True)
     Last_name = models.CharField(max_length=250)
     phone_number = models.CharField(max_length=15)
     profile_picture = models.ImageField(upload_to='instructors/', blank=True)
-    FirstYearSubjects = models.ForeignKey(
-        FirstYearFirstSemesterSubject,
+    FirstYearFirstSemesterCourse = models.ForeignKey(
+        FirstYearFirstSemesterCourses,
         on_delete= models.CASCADE,
-        related_name='FirstYearSubjects_Instructor'
+        related_name='FirstYearCoursesInstructor'
     )
 
     def __str__(self):

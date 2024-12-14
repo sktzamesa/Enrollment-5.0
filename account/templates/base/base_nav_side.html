@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} nav {% endblock %}</title>
+    {% block favicon %}
+    <link rel="icons" type="icons" href="{% static 'image/cvsu_logo.png'%}">
+
+    {% endblock %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="{% static "css/style.css" %}">
+   <style>
+      .cvsu_logo{
+   height: 50px;
+   width: auto;
+   }
+   .logo{
+      margin-right: 20px;
+   }
+   </style>
+</head>
+<body>
+
+    <header class="header">
+   
+        <section class="flex">
+            <img src="{% static 'image/cvsu_logo.png'%}" alt="Logo CvSU" class="cvsu_logo">
+           <a href="{% url 'home' %}" class="logo">CvSU</a>
+
+           <form action="search.html" method="post" class="search-form">
+              <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+              <button type="submit" class="fas fa-search"></button>
+           </form>
+
+           <div class="icons">
+              <div id="menu-btn" class="fas fa-bars"></div>
+              <div id="search-btn" class="fas fa-search"></div>
+              <div id="user-btn" class="fas fa-user"></div>
+              <div id="toggle-btn" class="fas fa-sun"></div>
+           </div>
+
+           <div class="profile">
+               {% if student_profile.Student_profile_photo %}
+    <img src="{{ student_profile.Student_profile_photo.url }}" class="image" alt="Profile photo of {{ student_profile.name }}">
+{% else %}
+    <img src="{% static 'image/pic-1.jpg' %}" class="image" alt="Default profile photo">
+{% endif %}
+                {% if request.user.is_authenticated %}
+           <h3 class="name">{{request.user.first_name|default:request.user.username}}</h3>
+            {% endif %}
+              <p class="role">Student</p>
+              <a href="{% url 'student_profile' %}" class="btn">view profile</a>
+              <div class="flex-btn">
+                <form action="{% url "logout" %}" method = "post" class="logout">
+                <!-- <div class="logout_btn"> </div>-->
+                  <button class="btn" type = "submit">Logout</button>
+                {% csrf_token %}
+                </form>
+
+            </div>
+           </div>
+
+        </section>
+
+     </header>
+    
+
+     <div class="side-bar">
+   
+        <div id="close-btn">
+           <i class="fas fa-times"></i>
+        </div>
+     
+        <div class="profile">
+           {% if student_profile.Student_profile_photo %}
+    <img src="{{ student_profile.Student_profile_photo.url }}" class="image" alt="Profile photo of {{ student_profile.name }}">
+{% else %}
+    <img src="{% static 'image/pic-1.jpg' %}" class="image" alt="Default profile photo">
+{% endif %}
+                       {% if request.user.is_authenticated %}
+           <h3 class="name">{{request.user.first_name|default:request.user.username}}</h3>
+            {% endif %}
+           <p class="role">student</p>
+           <a href="{% url 'student_profile' %}" class="btn">view profile</a>
+        </div>
+     
+        <nav class="navbar">
+           <a href="{% url 'home' %}"><i class="fas fa-home"></i><span>Home</span></a>
+           <a href="{% url 'grades' %}"><i class="fa-solid fa-table-list"></i><span>Grades</span></a>
+           <a href="{% url 'about' %}"><i class="fas fa-question"></i><span>About</span></a>
+           <a href="{% url 'course' %}"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+           <a href="{% url 'teacher' %}"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+           <a href="{% url 'contact' %}"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+        </nav>
+     
+     </div>
+
+            {% block content %}
+
+            {% endblock %}
+
+
+      {% block script %}
+           <script src="{% static 'js/script.js' %}"></script>
+      {% endblock %}
+
+</body>
+</html>

@@ -25,7 +25,7 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
@@ -65,9 +65,9 @@ INSTALLED_APPS = [
     'bscs.apps.BscsConfig',
     'bscs_year_section.apps.BscsYearSectionConfig',
     'bscs_student.apps.BscsStudentConfig',
-    'bscs_year_subjects.apps.BscsYearSubjectsConfig',
     'bscs_instructors.apps.BscsInstructorsConfig',
     'Bscs_Student_Grades.apps.BscsstudentgradesConfig',
+    'bscs_year_courses.apps.BscsYearCoursesConfig'
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -101,6 +101,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'account.context_processors.student_profile',  # Correct path
+
             ],
         },
     },

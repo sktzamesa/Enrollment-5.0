@@ -4,10 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "css/login_Design.css" %}">
+    <link rel="stylesheet" href="{% static 'css/login_Design.css' %}">
     <script src="https://kit.fontawesome.com/ff87496a7c.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="{% static "image/cvsu_logo.png" %}">
     <title>Login</title>
+
+    <style>
+        .addmission-link{
+            text-decoration: none;
+            color: #4CAF50;
+        }
+    </style>
 
 </head>
 <body>
@@ -57,7 +64,7 @@
 
                 <button type="submit" value="login">Sign In</button>
 
-                <div class="divider"><p> Not yet enrolled? Submit an admission form <a href = "{% url "admission:data_privacy" %}">here </a> </p></div>
+                <div class="divider"><p> Not yet enrolled? Submit an admission form <a class="addmission-link" href = "{% url "admission:data_privacy" %}">here </a> </p></div>
 
                 <!-- <div class="no_account" > 
                     <p>Don't have Account?</p>

@@ -4,17 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "css/logged_out_design.css" %}">
+    <link rel="stylesheet" href="{% static "css/logged_out_design.css"%}">
     <script src="https://kit.fontawesome.com/ff87496a7c.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="{% static 'image/cvsu_logo.png' %}">
+    <link rel="icon" type="image/png" href="{% static "image/cvsu_logo.png" %}">
     <title>Logged Out</title>
+
+    <style>
+        .right-side a {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background-color: #848484;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        }
+
+        .right-side a:hover {
+            background-color: #707070;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="left-side">
+        <div class="left-side" style="background-image: url('{% static "image/bg.png" %}')">
             <div class="content">
-                <img src="{% static 'image/cvsu_logo.png' %}" alt="Logo" class="logo"%}">
+                <img src="{% static "image/cvsu_logo.png" alt="Logo" class="logo"%}">
                 <h1>Cavite State University, <br> Bacoor Campus</h1>
             </div>
 
@@ -30,7 +49,7 @@
         <div class="right-side">
             <h2>You have been logged out</h2>
             <p>Thank you for visiting!</p>
-            <a href="{% url "login" %}">log-in again</a>
+            <a href="{% url "login" %}">Log in again</a>
         </div>
     </div>
 </body>
